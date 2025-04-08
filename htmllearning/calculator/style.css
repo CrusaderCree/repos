@@ -1,0 +1,127 @@
+*,
+*::before,
+*::after {
+	padding: 0px;
+	margin: 0px;
+	box-sizing: border-box;
+}
+
+body {
+	background-image : url(https://farm6.staticflickr.com/5194/7243686998_4b9bbed8da_b.jpg);
+    background-size: 100%;
+}
+
+.calculator {
+	width: 400px;
+	height: 600px;
+
+    background-image: url(https://www.shutterstock.com/blog/wp-content/uploads/sites/5/2021/07/Plaid-Feature.jpg);
+
+	border: solid 5px #2B547E;
+	border-radius: 50px;
+
+	margin: 40px auto;
+
+	display: flex;
+	flex-flow: column nowrap;
+	flex: none;
+}
+
+.display {
+	width: 350px;
+	height: 100px;
+
+	margin: 10px 20px;
+
+	background-color: #4863A0;
+   
+	border: solid 3px #354A21;
+
+	color: #FFFFFF;
+
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: space-between;
+	align-items: flex-end;
+}
+.cur-op,
+.op,
+.output {
+	height: 32px;
+}
+.op {
+	font-weight: 100;
+}
+.output {
+	font-weight: 600;
+	color: cyan;
+}
+
+.keypad {
+	width: 350px;
+	height: 450px;
+
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: center;
+	align-items: center;
+}
+.ops {
+	width: 320px;
+
+	display: flex;
+}
+.utils,
+.numbers, 
+.operators {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+
+	gap: 8px;
+}
+.utils {
+	width: 280px;
+	margin: 0px 0px 12px 30px;
+}
+
+.operators {
+	flex-direction: column;
+}
+
+.util,
+.number,
+.operator {
+	width: 60px;
+	height: 60px;
+
+	background-color: #1E90FF;
+	color: #FFFFFF;
+
+	font-weight: 900;
+	font-size: 18px;
+
+	border: solid 2px #4169E1;
+	border-radius: 40px;
+
+}
+
+.util {
+	background-color: #800517;
+	border: solid 2px #551606;
+
+	flex: 1 0 auto;
+}
+
+.operator {
+	background-color: #FC6600;
+}
+
+#equals {
+	background-color: #74B72E;
+}
+
+.deactivated {
+	display: none;
+}
