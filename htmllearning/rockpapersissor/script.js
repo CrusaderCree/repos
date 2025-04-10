@@ -1,4 +1,5 @@
 let options = { "1": "rock", "2": "paper", "3": "scissors" };
+let playerGender = {1:"Male",2:"Female",3:"Uttlery Confused"};
 
 // Array to store game history
 let gameHistory = [];
@@ -7,6 +8,14 @@ let gameHistory = [];
 document.addEventListener("DOMContentLoaded", function() {
     const form = document.getElementById("game-form");
     const select = document.getElementById("user-choice");
+    const selectGender = document.getElementById("user-Gender");
+
+    for (let key in playerGender){
+        const genOption = document.createElement("option"); // create a new <option> element
+        genOption.value = playerGender[key]; // set the value of the <option> element   
+        genOption.textContent = playerGender[key]; // set the text content of the <option> element
+        selectGender.appendChild(genOption); // append the <option> element to the <select> element
+    }
 
     for (let key in options){
         const option = document.createElement("option"); // create a new <option> element
@@ -22,6 +31,7 @@ document.addEventListener("DOMContentLoaded", function() {
         const playerChoice = document.getElementById("user-choice").value;
         const playerfname = document.getElementById("user-fname").value;
         const playerlname = document.getElementById("user-lname").value;
+        const playerGenderChosen = document.getElementById("user-Gender").value; 
 
         //populate the select element with options
 
@@ -32,7 +42,16 @@ document.addEventListener("DOMContentLoaded", function() {
         // Determine and display result
         const result = determineWinner(playerChoice, computerChoice);
 
-        const gameresult = {playername: { firstname: playerfname,lastname: playerlname},  player: playerChoice, computer: computerChoice, outcome: result };
+        const gameResult = {
+            playerName: { 
+                firstName: playerFname, 
+                lastName: playerLname, 
+                gender: playerGenderChosen 
+            },  
+            player: playerChoice, 
+            computer: computerChoice, 
+            outcome: result 
+        };
 
         gameHistory.push(gameresult); // Store the result in the history
         console.log(gameHistory); // Log the history to the console for debugging
