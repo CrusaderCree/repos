@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/repos/htmllearning/rockpapersissor/style.css">
+    <script defer src="/repos/htmllearning/rockpapersissor/script.js"></script>
+    <title>Rock Paper Scissors</title>
+</head>
+<body>
+    <div class="form-container">
+        <h1>Rock Paper Scissors</h1>
+        <form id="game-form">
+            <label for="user-fname">What is your first name </lable>
+            <input type="text" id="user-fname" name="user-fname" placeholder="Enter your first name" required>
+            <label for="user-lname">What is your last name </lable>
+            <input type="text" id="user-lname" name="user-lname" placeholder="Enter your last name" required>
+            <label for="user-choice">Choose your option:</label>
+            <select id="user-choice" name="user-choice" required>
+                <option value="" disabled selected>Select your choice</option>
+
+            </select>
+            <button type="submit">Play</button>
+        </form>
+        <p id="result">Result will appear here</p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,19 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: aquamarine;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+}
+.form-container {
+    max-width: 300px;
+}
+label, input, button {
+    display: block;
+    margin: 10px 0;
+}
+#result {
+    font-weight: bold;
+}
