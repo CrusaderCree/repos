@@ -31,6 +31,13 @@ newH1.textContent = "I'm in a div";
 pinkPara.textContent = "ME TOO";
 blackBordereddiv.style.backgroundColor = "pink";
 blackBordereddiv.style.border = "black"
-pinkPara.appendChild(blackBordereddiv);
-newH1.appendChild(blackBordereddiv);
+blackBordereddiv.appendChild(pinkPara);
+blackBordereddiv.appendChild(newH1);
 container.appendChild(blackBordereddiv);
+
+const btn = document.querySelector("#btn2");
+btn.addEventListener("mouseover", () => {alert("Hello World")});
+
+const helpText = document.createElement("div");
+helpText.textContent = "No Luke, I am your father!"
+helpText.style.backgroundColor = "lightgray";
