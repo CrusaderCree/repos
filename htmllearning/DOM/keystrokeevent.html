@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Keyboard Events: Key/Code</title>
+</head>
+<body>
+    <input type="text" id="message">
+
+    <script>
+        let textBox = document.getElementById('message');
+        const keyStorage = []
+        textBox.addEventListener('keydown', (event) => {
+         //   console.log(`key=${event.key},code=${event.code}`); 
+           if(event.key !== 'Shift'){
+            keyStorage.push(event.key); // Store the keystroke in the Array
+            console.log(keyStorage);  // Display the Array in the Console
+            textBox.value = ''; // Clear the textbox
+           }
+        });
+    </script>
+</body>
+</html>
